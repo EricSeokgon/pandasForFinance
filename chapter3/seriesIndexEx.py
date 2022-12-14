@@ -30,3 +30,6 @@ s2 = s.reindex(["메로나", "비비빅", "하겐다즈"])
 print(s2)
 # NaN을 0으로 변경할 때는 fillna 메서드를 사용할수 있다.
 print(s2.fillna(0))
+
+# reindex 메서드르 ㄹ사용할 때 fill_value 파라미터를 사용해서 한번에 처리할수 있다.
+s2 = s.reindex(["메로나", "비비빅", "하겐다즈"], fill_value=0)
