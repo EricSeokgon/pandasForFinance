@@ -19,3 +19,14 @@ print(arr[cond0 & cond1])
 arr = np.array([10, 20, 30])
 print(arr[(arr > 10) & (arr < 30)])
 
+# 조건이 10이상이 값을 크다는 으미로 1 그렇지 않은 경우 0으로 매핑
+arr = np.array([10, 20, 30])
+cond = arr > 10
+arr[cond] = 1
+arr[~cond] = 0
+print(arr)
+
+# 넘파이에서는 where함수가 정의돼 있어서 이르 ㄹ사용하면 더욱 간단히 코드를 표현할 수 있다.
+arr = np.array([10, 20, 30])
+arr = np.where(arr > 10, 1, 0)
+print(arr)
