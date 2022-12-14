@@ -28,3 +28,6 @@ data = [
 
 c = np.array(data)
 print(c.shape)
+
+print(np.zeros(3))
+print(np.ones(3))
