@@ -27,7 +27,14 @@ print(a32 / 3)
 
 # nan은 Not a Number의 약자로 숫자가 아닌 값 혹은 저으이도지 않는 숫자
 # inf 혹은 -inf는 무한대의 숫자를 뜻함
-
 print(np.nan, type(np.nan))
 print(np.inf, type(np.inf))
 print(-np.inf, type(-np.inf))
+
+arr = np.array([-1, 2, -3])
+# print(arr / 0)
+
+# 결측치에 숫자를 더하면 넘파이는 결측값을 반환
+arr = np.array([-1, 2, -3])
+print(arr + np.nan)
+print(arr + np.inf)
