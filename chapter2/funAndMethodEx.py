@@ -18,3 +18,12 @@ np.random.randint(46, size=(2, 5))
 # linspace 첫번째는 시작 값, 두번째는 종료값, 세번째는 분할 지점의 수
 x = np.linspace(0, 10, 3)
 print(x)
+
+y = x ** 2
+
+# 넘파이의 stack함수는 여러 개의 ndarray를 하나로 합칠 때 사용
+# vstack 수직, hstack은 수평
+a = np.arange(4)
+b = np.arange(4, 8)
+c = np.vstack([a, b])
+print(c)
