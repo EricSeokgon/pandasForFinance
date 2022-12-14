@@ -30,3 +30,10 @@ print(arr)
 arr = np.array([10, 20, 30])
 arr = np.where(arr > 10, 1, 0)
 print(arr)
+
+# 10보다 크다면 10을 더하고 그렇지 않다면 10을 빼기
+cond = arr > 10
+arr[cond] = arr[cond] + 10
+arr[~cond] = arr[~cond] - 10
+
+arr = np.where(arr > 10, arr + 10, arr - 10)
