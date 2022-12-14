@@ -33,3 +33,7 @@ data = [
 # ndarray를 인덱싱해서 위와 유사하게 계산할수 있음
 arr = np.array(data)
 print(arr[0] * 3 + arr[1] * 2)
+
+# 이차원 데이터의 브로드캐스팅을 용용해서 문제를 풀수 있음
+weight = np.array([3, 2]).reshape(2, 1)
+print((weight * arr).sum(axis=0))
