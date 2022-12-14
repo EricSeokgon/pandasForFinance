@@ -13,4 +13,8 @@ np.random.randint(3)
 
 # size 옵션을 사용하면 생성되는 숫자의 개수를 지정할 수있다.
 np.random.randint(46, size=5)
-np.random.randint(46, size=(2,5))
+np.random.randint(46, size=(2, 5))
+
+# linspace 첫번째는 시작 값, 두번째는 종료값, 세번째는 분할 지점의 수
+x = np.linspace(0, 10, 3)
+print(x)
