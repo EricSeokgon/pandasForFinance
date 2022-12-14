@@ -20,3 +20,15 @@ print(arr[target])
 # 4행 5열로 구성된 ndarray에서 두개의 행을 슬라이싱
 arr = np.arange(20).reshape(4, 5)
 print(arr[:2])
+
+# ndarray가 아닌 리스트라면 다음과 같이 리스트에 값을 저장하는 일을 해야함
+result = []
+for row in arr:
+    row_01 = [row[0], row[1]]
+    result.append(row_01)
+print(arr[:, :2])
+
+# 4행 5열의 ndarray에서 일부 영역을 슬라이싱
+print(arr[1:4, 2:5])
+print(arr[1:, 2:])
+
