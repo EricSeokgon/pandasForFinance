@@ -15,4 +15,19 @@ b = a.astype('int8')
 print(a)
 print(b)
 
+a16 = np.array([1.333333], dtype=np.float16)
+a32 = np.array([1.333333], dtype=np.float32)
+print(a16)
+print(a32)
 
+a16 = np.array([1.0], dtype=np.float16)
+a32 = np.array([1.0], dtype=np.float32)
+print(a16 / 3)
+print(a32 / 3)
+
+# nan은 Not a Number의 약자로 숫자가 아닌 값 혹은 저으이도지 않는 숫자
+# inf 혹은 -inf는 무한대의 숫자를 뜻함
+
+print(np.nan, type(np.nan))
+print(np.inf, type(np.inf))
+print(-np.inf, type(-np.inf))
