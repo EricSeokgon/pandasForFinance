@@ -41,3 +41,8 @@ print(np.zeros((3, 4)))
 print(np.arange(5))
 print(np.arange(1, 5))
 print(np.arange(1, 5, 2))
+
+# 넘파이는 배열의 형상(shape)을 변경할 수 있는 reshape 함수를 제공
+ndarr1 = np.arange(6)
+ndarr2 = ndarr1.reshape(2, 3)
+print(ndarr2)
