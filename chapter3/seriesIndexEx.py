@@ -28,3 +28,5 @@ index = ["메로나", "구구콘", "하겐다즈"]
 s = Series(data=data, index=index)
 s2 = s.reindex(["메로나", "비비빅", "하겐다즈"])
 print(s2)
+# NaN을 0으로 변경할 때는 fillna 메서드를 사용할수 있다.
+print(s2.fillna(0))
