@@ -31,3 +31,8 @@ print(c.shape)
 
 print(np.zeros(3))
 print(np.ones(3))
+
+#zeros,ones 함수의 인자로 튜플을 전달하면 0, 1로 구성된 다차원 배열을 생성할 수있다.
+size = (3, 4)
+print(np.zeros(size))
+print(np.zeros((3, 4)))
