@@ -12,4 +12,5 @@ data2 = [
 
 arr2 = np.array(data2)
 print(arr2)
-print(type(data2))
+print(type(arr2))
+print(type(arr2[0]))
