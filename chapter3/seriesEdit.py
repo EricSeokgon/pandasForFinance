@@ -11,3 +11,9 @@ s['메로나'] = 500  # []기호 사용
 
 s.loc['비비빅'] = 500  # 값 추가
 print(s)
+
+print(s.drop('메로나'))
+# print(s.drop(0)) #에러
+
+s = s.drop('메로나')
+print(s)
