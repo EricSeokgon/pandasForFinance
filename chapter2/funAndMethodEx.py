@@ -6,3 +6,4 @@ print(arr.sum())
 
 # sum메서드에 축정보를 지정할 수있다.
 print(arr.sum(axis=0))
+print(arr.sum(axis=1))
