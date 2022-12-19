@@ -8,3 +8,12 @@ data = {
 
 df = DataFrame(data)  # DataFrame 클래스의 객체 생성 (생성자 호출)
 print(df)
+
+data = [
+    ["037730", "3R", 1510],
+    ["06360", "3SOFT", 1790],
+    ["005760", "ACTS", 1185]
+]
+columns = ["종목코드", "종목명", "현재가"]
+df = DataFrame(data=data, columns=columns)
+print(df)
