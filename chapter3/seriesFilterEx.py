@@ -16,3 +16,7 @@ close = Series(data=close, index=index)
 cond = close > open
 print(cond)
 print(close[cond])
+print(close[close > open])  # 변수를 사용하지 않고 한줄로 짧게 표현
+
+print(close.index[close > open])
+print(close[close > open].index)
