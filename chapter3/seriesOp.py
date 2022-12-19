@@ -31,3 +31,10 @@ print(diff.index[max_idx])
 
 print(diff.idxmax())
 print(diff.idxmin())
+
+date = ["6/1", "6/2", "6/3", "6/4", "6/5"]
+high = Series([42800, 42700, 42050, 42950, 43000], index=date)
+low = Series([42150, 42150, 41300, 42150, 42350], index=date)
+profit = high / low
+print(profit)
+print(profit.cumprod())
