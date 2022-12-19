@@ -15,3 +15,4 @@ open = Series(data=open, index=index)
 close = Series(data=close, index=index)
 cond = close > open
 print(cond)
+print(close[cond])
