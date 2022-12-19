@@ -1,6 +1,6 @@
 from pandas import Series
 
-data = [3.1, 2.0, 10.1, 5.1]
+data = [3.1, 2.0, 10.1, 3.1]
 index = ['000010', '000020', '000030', '000040']
 s = Series(data=data, index=index)
 print(s)
@@ -12,3 +12,8 @@ print(s1)
 # 정렬(내림차순)
 s2 = s.sort_values(ascending=False)
 print(s2)
+
+data = [3.1, 2.0, 10.1, 3.1]
+index = ['000010', '000020', '000030', '000040']
+s = Series(data=data, index=index)
+print(s.rank())
