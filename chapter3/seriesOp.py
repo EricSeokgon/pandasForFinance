@@ -38,3 +38,6 @@ low = Series([42150, 42150, 41300, 42150, 42350], index=date)
 profit = high / low
 print(profit)
 print(profit.cumprod())
+
+print(profit.cumprod().iloc[-1])
+
