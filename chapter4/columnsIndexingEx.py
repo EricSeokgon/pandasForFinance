@@ -35,3 +35,7 @@ print(df.iloc[0, 1])
 print(df["현재가"].iloc[0])
 print(df["현재가"].loc["037730"])
 print(df["현재가"]["037730"])
+
+# 특정 범위 가져오기
+print(df.loc[["037730", "036360"]])
+print(df.iloc[[0, 1]])
