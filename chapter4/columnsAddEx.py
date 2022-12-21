@@ -13,3 +13,6 @@ df = DataFrame(data=data, index=index, columns=columns)
 s = Series(data=[1600, 1600, 1600], index=df.index)
 df["목표가"] = s
 print(df)
+
+df["목표가"] = 1600
+print(df)
