@@ -16,3 +16,6 @@ print(df)
 
 df["목표가"] = 1600
 print(df)
+
+df["괴리율"] = (df["목표가"] - df["현재가"]) / df["현재가"]
+print(df)
