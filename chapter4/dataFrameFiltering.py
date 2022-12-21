@@ -13,3 +13,6 @@ cond = df["현재가"] >= 1400
 print(df.loc[cond])
 print(df.loc[cond]["현재가"])
 print(df.loc[cond, "현재가"])
+
+cond = (df["현재가"] >= 1400) & (df["현재가"] < 1700)
+print(df.loc[cond])
