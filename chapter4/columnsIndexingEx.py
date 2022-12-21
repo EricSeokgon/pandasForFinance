@@ -18,3 +18,13 @@ print(df[['현재가']]) # 데이터프레임의 한개 컬럼 슬라이싱
 print(df.loc["037730"])
 print(df.iloc[0])
 print(df.iloc[-1])
+
+#행 번호로 행 선태 후 시리즈 인덱싱
+print(df.iloc[0].iloc[1]) #시리즈 행 번호
+print(df.iloc[0].loc["현재가"]) #시리즈 인덱스
+print(df.iloc[0]["현재가"]) #시리즈 인덱스
+
+#인덱스로 행 선택 후 시리즈 인덱싱
+print(df.loc["037730"].loc[1]) #시리즈 행 번호
+print(df.loc["037730"].loc["현재가"]) #시리즈 인덱스
+print(df.loc["037730"]["현재가"]) #시리즈 인덱스
