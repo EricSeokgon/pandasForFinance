@@ -11,3 +11,5 @@ columns = ["종목명", "현재가", "등락률"]
 df = DataFrame(data=data, index=index, columns=columns)
 cond = df["현재가"] >= 1400
 print(df.loc[cond])
+print(df.loc[cond]["현재가"])
+print(df.loc[cond, "현재가"])
