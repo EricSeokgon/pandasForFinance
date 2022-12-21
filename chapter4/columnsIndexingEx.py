@@ -31,3 +31,7 @@ print(df.loc["037730"]["현재가"])  # 시리즈 인덱스
 
 print(df.loc["037730", "현재가"])
 print(df.iloc[0, 1])
+
+print(df["현재가"].iloc[0])
+print(df["현재가"].loc["037730"])
+print(df["현재가"]["037730"])
