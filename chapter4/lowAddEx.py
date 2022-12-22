@@ -13,3 +13,6 @@ df = DataFrame(data=data, index=index, columns=columns)
 s = Series(data=["LG전자", 60000, 3.84], index=df.columns)
 df.loc["066570"] = s
 print(df)
+
+df.loc["066570"]=['LG전자',60000,3.84]
+print(df)
