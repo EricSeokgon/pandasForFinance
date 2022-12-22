@@ -13,3 +13,7 @@ df = DataFrame(data=data, index=index, columns=columns)
 df_new = df.drop("현재가", axis=1)
 print(df)
 print(df_new)
+
+df_new = df.drop("037730", axis=0)
+print(df)
+print(df_new)
