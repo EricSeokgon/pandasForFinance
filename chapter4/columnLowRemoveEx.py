@@ -19,4 +19,5 @@ print(df)
 print(df_new)
 
 df.drop(["037730", "005760"], axis=0, inplace=True)
+
 print(df)
