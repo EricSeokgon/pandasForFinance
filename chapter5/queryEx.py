@@ -9,3 +9,6 @@ data = [
 df = DataFrame(data=data)
 df = df.set_index('cd')
 print(df)
+
+cond = df['open'] >= 2000
+print(df[cond])
