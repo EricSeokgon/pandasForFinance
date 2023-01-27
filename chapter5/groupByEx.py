@@ -24,10 +24,15 @@ index = ["2차전지(생산)", "해운", "시스템반도체"]
 s = pd.Series(data=data, index=index)
 
 df.groupby("테마")["PER"].mean()
-gb=df.groupby("테마")
-temp=gb.get_group("2차전지(생산)")
+gb = df.groupby("테마")
+temp = gb.get_group("2차전지(생산)")
 print(temp)
 
-temp = df[["테마","PER","PBR"]].groupby("테마").get_group("2차전지(생산)")
+temp = df[["테마", "PER", "PBR"]].groupby("테마").get_group("2차전지(생산)")
 print(temp)
 
+temp = df.groupby("테마")[["PBR", "PBR"]].get_group("2차전지(생산)")
+print(temp)
+
+df.groupby("테마")[["PER", "PBR"]].mean()
+df.groupby("테마").mean()
