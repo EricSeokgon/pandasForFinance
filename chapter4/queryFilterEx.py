@@ -11,3 +11,12 @@ index = ["DPS", "PER", "PBR"]
 
 df = DataFrame(data=data, index=index, columns=columns)
 print(df)
+
+df.filter(items=['2018/12'])
+df.filter(items=["PER"], axis=0)
+
+df.filter(regex="2020") #2020이라는 문자열 일부로 필터링
+
+df.filter(regex="^2020") #2020으로 시작하는 문자열 패턴만 선택
+
+df.filter(regex="R$", axis=0) #R로 끝나는 모든 패턴을 탐색
