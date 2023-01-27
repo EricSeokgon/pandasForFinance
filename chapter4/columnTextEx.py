@@ -8,5 +8,10 @@ data = [
     {"cd": "A054620", "nm": "APS홀딩스", "close": "19,400"}
 ]
 df = DataFrame(data=data)
-df
+print(df)
 
+df['cd'] = df['cd'].str[1:]
+print(df)
+
+df['close'] = df['close'].str.replace(',', '').astype(np.int64)
+print(df)
