@@ -12,3 +12,15 @@ print(df)
 
 cond = df['open'] >= 2000
 print(df[cond])
+
+print(df.query("nm=='3S'"))
+print(df.query("nm=='3S'"))
+
+print(df.query("open > close"))
+
+print(df.query("nm in['3S', 'AK홀딩스']"))
+
+df.query("cd == 'A06310'")
+
+name = "AJ네트윅스"
+df.query('nm == @name')
