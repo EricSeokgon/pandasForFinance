@@ -13,8 +13,10 @@ print(df)
 def remove_comma(x):
     return int(x.replace(',', ''))
 
-df['03/02'] = df['03/02'].map(remove_comma)
-df['03/03'] = df['03/03'].map(remove_comma)
-df['03/04'] = df['03/04'].map(remove_comma)
 
+# df['03/02'] = df['03/02'].map(remove_comma)
+# df['03/03'] = df['03/03'].map(remove_comma)
+# df['03/04'] = df['03/04'].map(remove_comma)
+df = df.applymap(remove_comma)
 print(df)
+print(df.dtypes)
