@@ -12,3 +12,6 @@ df.set_index("종목코드", inplace=True)
 
 df2 = df.sort_values(by="현재가", ascending=False) #내림차순 정렬
 print(df2)
+
+df['순위'] = df['현재가'].rank()
+print(df)
