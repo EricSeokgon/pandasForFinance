@@ -36,3 +36,5 @@ print(temp)
 
 df.groupby("테마")[["PER", "PBR"]].mean()
 df.groupby("테마").mean()
+
+df.groupby("테마").agg({"PER": max, "PBR": min})
