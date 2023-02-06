@@ -1,5 +1,6 @@
 from pandas import DataFrame
 import pandas as pd
+import numpy as np
 
 data = [
     ["2차전지(생산)", "SK이노베이션", 10.19, 1.29],
@@ -38,3 +39,4 @@ df.groupby("테마")[["PER", "PBR"]].mean()
 df.groupby("테마").mean()
 
 df.groupby("테마").agg({"PER": max, "PBR": min})
+df.groupby("테마").agg({"PER": [min, max], "PBR": [np.std, np.var]})
