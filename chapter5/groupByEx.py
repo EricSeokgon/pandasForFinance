@@ -60,9 +60,9 @@ data = {
 index = ['2019-06-21', '2019-06-20']
 df2 = DataFrame(data=data, index=index)
 
-df = pd.concat([df1, df2], axis=1)
+df = pd.concat([df1, df2], axis=1, join='inner')
 print(df)
 
-정렬순서 = ['시가', '고가', '저가', '종가', '거래량']
-df = df[정렬순서]
-print(df)
+# 정렬순서 = ['시가', '고가', '저가', '종가', '거래량']
+# df = df[정렬순서]
+# print(df)
