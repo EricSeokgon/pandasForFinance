@@ -38,7 +38,7 @@ print(temp)
 df.groupby("테마")[["PER", "PBR"]].mean()
 df.groupby("테마").mean()
 
-#df.groupby("테마").agg({"PER": max, "PBR": min})
+# df.groupby("테마").agg({"PER": max, "PBR": min})
 df.groupby("테마").agg({"PER": [min, max], "PBR": [np.std, np.var]})
 
 # 첫 번쨰 데이터프레임
@@ -61,4 +61,8 @@ index = ['2019-06-21', '2019-06-20']
 df2 = DataFrame(data=data, index=index)
 
 df = pd.concat([df1, df2], axis=1)
+print(df)
+
+정렬순서 = ['시가', '고가', '저가', '종가', '거래량']
+df = df[정렬순서]
 print(df)
