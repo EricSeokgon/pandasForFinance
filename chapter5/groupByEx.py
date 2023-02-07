@@ -38,5 +38,27 @@ print(temp)
 df.groupby("테마")[["PER", "PBR"]].mean()
 df.groupby("테마").mean()
 
-df.groupby("테마").agg({"PER": max, "PBR": min})
+#df.groupby("테마").agg({"PER": max, "PBR": min})
 df.groupby("테마").agg({"PER": [min, max], "PBR": [np.std, np.var]})
+
+# 첫 번쨰 데이터프레임
+data = {
+    '종가': [113000, 111500],
+    '거래량': [555850, 292163]
+}
+
+index = ['2019-06-21', '2019-06-20']
+df1 = DataFrame(data=data, index=index)
+
+# 두 번째 데이터프레임
+data = {
+    '시가': [112500, 110000],
+    '고가': [115000, 112000],
+    '저가': [111500, 109000]
+}
+
+index = ['2019-06-21', '2019-06-20']
+df2 = DataFrame(data=data, index=index)
+
+df = pd.concat([df1, df2], axis=1)
+print(df)
