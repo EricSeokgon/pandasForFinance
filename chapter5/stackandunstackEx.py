@@ -14,3 +14,8 @@ df_stacked = df.stack().reset_index()
 
 temp = df_stacked['level_1'].str.split('/')
 print(temp)
+
+df_split = DataFrame(list(df_stacked['level_1'].str.split('/')))
+df_merged = pd.concat([df_stacked, df_split], axis=1)
+df_merged.columns = ['계정', '년월', '금액', '연도', '월']
+print(df_merged)
