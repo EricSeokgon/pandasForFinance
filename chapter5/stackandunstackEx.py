@@ -2,15 +2,15 @@ from pandas import DataFrame
 import pandas as pd
 
 data = [
-    [1000, 900, 800, 700],
-    [1200, 1400, 900, 800],
+    [1000, 1100, 900, 1200, 1300],
+    [800, 2000, 1700, 1500, 1800],
 ]
 
-level_0 = ['영업이익', '당기순이익']
-level_1 = ['컨센서스', '잠정치']
-columns = pd.MultiIndex.from_product([level_0, level_1])
+index = ['자본금', '부채']
+columns = ["2020/03", "2020/06", "2020/09", "2021/03", "2021/06"]
 
-df = DataFrame(data=data, index=["2020/06", "2020/09"], columns=columns)
-print(df.stack())
-print(df.stack(level=0))
-print(df.stack().stack())
+df = DataFrame(data=data, columns=columns)
+df_stacked = df.stack().reset_index()
+
+temp = df_stacked['level_1'].str.split('/')
+print(temp)
