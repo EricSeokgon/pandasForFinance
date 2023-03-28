@@ -12,3 +12,5 @@ columns = pd.MultiIndex.from_product([level_0, level_1])
 
 df = DataFrame(data=data, index=["2020/06", "2020/09"], columns=columns)
 print(df.stack())
+print(df.stack(level=0))
+print(df.stack().stack())
